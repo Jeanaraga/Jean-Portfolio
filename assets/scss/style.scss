@@ -7,6 +7,10 @@ $branco: #fff;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
+
+body {
+    background: linear-gradient(120deg,#fff,#ccbebe);
+}
 @import 'header';
 @import 'main';
 @import 'about';
