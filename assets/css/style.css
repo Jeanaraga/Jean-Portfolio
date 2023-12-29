@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.cabecalho {
+  display: flex;
+  width: 100%;
+  padding: 15px 40px;
+  align-items: center;
+  justify-content: space-between;
+  background: #000000;
+  color: #fff;
+  position: fixed;
+}
+.cabecalho .logo {
+  cursor: pointer;
+}
+.cabecalho .logo h1 {
+  font-family: "Bebas Neue", sans-serif;
+}
+.cabecalho .nav-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.cabecalho .nav-desktop a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+.cabecalho .nav-desktop a:hover {
+  border-bottom: 1px solid #d666f8;
+}
+.cabecalho .btn-menu-mobile {
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+@media screen and (max-width: 720px) {
+  .cabecalho .nav-desktop {
+    display: none;
+  }
+  .cabecalho .btn-menu-mobile {
+    display: flex;
+  }
+}
+
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 40px;
+  background: #000000;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  z-index: 2000;
+  animation: animaMenu 0.8s ease 0s 1 normal forwards;
+}
+.nav-mobile a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+.nav-mobile a:hover {
+  border-bottom: 1px solid #d666f8;
+}
+
+.nav-mobile.ativar {
+  display: flex;
+}
+
+@keyframes animaMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(-65px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient(120deg, #fff, #ccbebe);
+}
+@media screen and (max-width: 480px) {
+  main {
+    padding: 15px;
+  }
+}
+main .container-info-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+main .container-info-intro h4 {
+  color: #000000;
+  font-weight: 400;
+}
+main .container-info-intro h2 {
+  color: #000;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+@media screen and (max-width: 480px) {
+  main .container-info-intro h2 {
+    font-size: 32px;
+  }
+}
+main .container-info-intro h2 span {
+  color: #d666f8;
+}
+main .container-info-intro p {
+  color: #6c666d;
+  max-width: 500px;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 480px) {
+  main .container-info-intro p {
+    font-size: 12px;
+  }
+}
+main .container-info-intro .botoes-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+}
+main .container-info-intro .botoes-intro button {
+  font-size: 1rem;
+  padding: 5px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border: 1.5px solid #000;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+main .container-info-intro .botoes-intro button:hover {
+  color: #d666f8;
+  background: #000;
+  border: 1.5px solid #fff;
+}
+
+.sobre-mim {
+  height: calc(100vh - 70px);
+}
+
+/*# sourceMappingURL=style.css.map */

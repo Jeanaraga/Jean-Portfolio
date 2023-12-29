@@ -1,0 +1,107 @@
+$roxo-fraco: #d666f8;
+$preto-fraco: #000000;
+
+.cabecalho {
+    display: flex;
+    width: 100%;
+    padding: 15px 40px;
+    align-items: center;
+    justify-content: space-between;
+    background: $preto-fraco;
+    color: $branco;
+    position: fixed;
+
+    .logo {
+        cursor: pointer;
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+    }
+
+    .nav-desktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            color: $branco;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s ease;
+
+            &:hover {
+                border-bottom: 1px solid $roxo-fraco;
+            }
+        }
+    }
+
+    .btn-menu-mobile {
+        color: $branco;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 5px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+
+    @media screen and (max-width: 720px) {
+        .nav-desktop {
+            display: none;
+        }
+        .btn-menu-mobile {
+            display: flex;
+        }
+    }
+}
+
+.nav-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 40px;
+    background: $preto-fraco;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 2000;
+    animation: animaMenu 0.8s ease 0s 1 normal forwards;
+
+    a {
+        text-decoration: none;
+        font-size: 18px;
+        color: $branco;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s ease;
+
+        &:hover {
+            border-bottom: 1px solid $roxo-fraco;
+        }
+    }
+}
+
+.nav-mobile.ativar {
+    display: flex;
+}
+
+@keyframes animaMenu {
+	0% {
+		opacity: 0;
+		transform: translateY(-65px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
