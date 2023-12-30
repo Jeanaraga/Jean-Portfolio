@@ -1,113 +1,117 @@
 $roxo-fraco: #d666f8;
 
 .sobre-mim {
-    height: 100vh;
-    padding: 40px;
+  height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+  }
+
+  .container-sobre-mim {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
     justify-content: center;
 
+    h2 {
+      font-size: 48px;
+      color: #000;
+      margin-bottom: 1rem;
 
-
-    @media screen and (max-width:480px) {
-        padding: 20px;
+      span {
+        color: $roxo-fraco;
+      }
     }
+    p {
+      background-color: #d6caca;
+      padding: 5px 20px;
+      border-left: 8px solid $roxo-fraco;
 
-    .container-sobre-mim {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
+      @media screen and (max-width: 480px) {
+        font-size: 12px;
+      }
+    }
+    .container-infos-skils {
+      margin-top: 3.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      justify-content: space-between;
+      width: 100%;
+      gap: 1rem;
+
+      @media screen and (max-width: 720px) {
+        align-items: center;
         justify-content: center;
 
-        
-        h2 {
-            font-size: 48px;
-            color: #000;
-            margin-bottom: 1rem;
-
-            span {
-                color: $roxo-fraco;
-            }
+        .info-pessoa {
+          min-width: 100%;
         }
-        p {
-            background-color: #d6caca;
-            padding: 5px 20px;
-            border-left: 8px solid $roxo-fraco;
+      }
 
-            @media screen and (max-width:480px) {
-                font-size: 12px;
-            }
+      .info-pessoa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: #86658a1c;
+        padding: 8px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
+
+        h3 {
+          color: #735f75;
+          font-weight: 400;
         }
-        .container-infos-skils {
-            margin-top: 2.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: start;
-            justify-content: space-between;
-            width: 100%;
-            gap: 1rem;
 
-            @media screen and (max-width:720px) {
-                align-items: center;
-                justify-content: center;
-
-                .info-pessoa,.info-skils {
-                    min-width: 100%;
-                }
-            }
-
-            .info-pessoa {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                background: #d6caca;
-                padding: 8px;
-                border-radius: 5px;
-                box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
-
-                h3 {
-                    color: #735f75;
-                    font-weight: 400;
-                }
-
-                ul {
-                    list-style-type: none;
-                    width: 100%;
-                    text-align: start;
-                }
-            }
-            .info-skils {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                background: #d6caca;
-                padding: 8px;
-                border-radius: 2px;
-                box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
-
-                h3 {
-                    color: #735f75;
-                    font-weight: 400;
-                }
-
-                ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    list-style-type: none;
-                    align-items: center;
-                    justify-content: space-between;
-                    gap: 1rem;
-                    min-width: 250px;
-
-                    li {
-                        font-size: 3rem;
-                    }
-                }
-            }   
+        ul {
+          list-style-type: none;
+          width: 100%;
+          text-align: start;
         }
+      }
+      .info-skils {
+        min-height: 180px;
+        min-width: 250px;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: #d6caca56;
+        padding: 8px;
+        border-right: 10px solid $roxo-fraco;
+        box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
+
+        @media screen and (max-width: 720px) {
+          min-width: 100%;
+        }
+
+        h3 {
+          color: #735f75;
+          font-weight: 400;
+        }
+
+        ul {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          list-style-type: none;
+          align-items: center;
+          justify-content: space-around;
+          gap: 1rem;
+
+          li {
+            font-size: 3.1rem;
+          }
+        }
+      }
     }
+  }
 }

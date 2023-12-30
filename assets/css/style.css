@@ -219,7 +219,7 @@ main .container-info-intro .botoes-intro button:hover {
   }
 }
 .sobre-mim .container-sobre-mim .container-infos-skils {
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
   display: flex;
   flex-wrap: wrap;
   align-items: start;
@@ -232,7 +232,7 @@ main .container-info-intro .botoes-intro button:hover {
     align-items: center;
     justify-content: center;
   }
-  .sobre-mim .container-sobre-mim .container-infos-skils .info-pessoa, .sobre-mim .container-sobre-mim .container-infos-skils .info-skils {
+  .sobre-mim .container-sobre-mim .container-infos-skils .info-pessoa {
     min-width: 100%;
   }
 }
@@ -242,7 +242,7 @@ main .container-info-intro .botoes-intro button:hover {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #d6caca;
+  background: rgba(134, 101, 138, 0.1098039216);
   padding: 8px;
   border-radius: 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -257,31 +257,47 @@ main .container-info-intro .botoes-intro button:hover {
   text-align: start;
 }
 .sobre-mim .container-sobre-mim .container-infos-skils .info-skils {
+  min-height: 180px;
+  min-width: 250px;
+  width: 55%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #d6caca;
+  background: rgba(214, 202, 202, 0.337254902);
   padding: 8px;
-  border-radius: 2px;
+  border-right: 10px solid #d666f8;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 720px) {
+  .sobre-mim .container-sobre-mim .container-infos-skils .info-skils {
+    min-width: 100%;
+  }
 }
 .sobre-mim .container-sobre-mim .container-infos-skils .info-skils h3 {
   color: #735f75;
   font-weight: 400;
 }
 .sobre-mim .container-sobre-mim .container-infos-skils .info-skils ul {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 1rem;
-  min-width: 250px;
 }
 .sobre-mim .container-sobre-mim .container-infos-skils .info-skils ul li {
-  font-size: 3rem;
+  font-size: 3.1rem;
+}
+
+#projetos {
+  height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
