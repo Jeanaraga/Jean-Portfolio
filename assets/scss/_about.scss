@@ -1,16 +1,113 @@
+$roxo-fraco: #d666f8;
+
 .sobre-mim {
-    height: calc(100vh - 70px);
+    height: 100vh;
     padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
 
+
+
+    @media screen and (max-width:480px) {
+        padding: 20px;
+    }
+
     .container-sobre-mim {
-        border: 1px solid #000;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
+
         
+        h2 {
+            font-size: 48px;
+            color: #000;
+            margin-bottom: 1rem;
+
+            span {
+                color: $roxo-fraco;
+            }
+        }
+        p {
+            background-color: #d6caca;
+            padding: 5px 20px;
+            border-left: 8px solid $roxo-fraco;
+
+            @media screen and (max-width:480px) {
+                font-size: 12px;
+            }
+        }
+        .container-infos-skils {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            justify-content: space-between;
+            width: 100%;
+            gap: 1rem;
+
+            @media screen and (max-width:720px) {
+                align-items: center;
+                justify-content: center;
+
+                .info-pessoa,.info-skils {
+                    min-width: 100%;
+                }
+            }
+
+            .info-pessoa {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                background: #d6caca;
+                padding: 8px;
+                border-radius: 5px;
+                box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
+
+                h3 {
+                    color: #735f75;
+                    font-weight: 400;
+                }
+
+                ul {
+                    list-style-type: none;
+                    width: 100%;
+                    text-align: start;
+                }
+            }
+            .info-skils {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                background: #d6caca;
+                padding: 8px;
+                border-radius: 2px;
+                box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
+
+                h3 {
+                    color: #735f75;
+                    font-weight: 400;
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    list-style-type: none;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    min-width: 250px;
+
+                    li {
+                        font-size: 3rem;
+                    }
+                }
+            }   
+        }
     }
 }
