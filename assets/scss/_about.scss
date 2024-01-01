@@ -17,6 +17,8 @@ $roxo-fraco: #d666f8;
     align-items: start;
     justify-content: center;
 
+    
+
     h2 {
       font-size: 48px;
       color: #000;
@@ -27,12 +29,12 @@ $roxo-fraco: #d666f8;
       }
     }
     p {
-      background-color: #d6caca;
+      // background-color: #d6caca;
       padding: 5px 20px;
       border-left: 8px solid $roxo-fraco;
 
       @media screen and (max-width: 480px) {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
     .container-infos-skils {
@@ -44,7 +46,7 @@ $roxo-fraco: #d666f8;
       width: 100%;
       gap: 1rem;
 
-      @media screen and (max-width: 720px) {
+      @media screen and (max-width: 768px) {
         align-items: center;
         justify-content: center;
 
@@ -59,10 +61,6 @@ $roxo-fraco: #d666f8;
         align-items: center;
         justify-content: center;
         gap: 10px;
-        background: #86658a1c;
-        padding: 8px;
-        border-radius: 5px;
-        box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
 
         h3 {
           color: #735f75;
@@ -72,11 +70,24 @@ $roxo-fraco: #d666f8;
         ul {
           list-style-type: none;
           width: 100%;
-          text-align: start;
+          background: #d6caca56;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          justify-content: center;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
+          min-height: 150px;
+
+          li {
+            @media screen and (max-width: 480px) {
+              font-size: 14px;
+            }
+          }
         }
       }
       .info-skils {
-        min-height: 180px;
         min-width: 250px;
         width: 55%;
         display: flex;
@@ -84,13 +95,9 @@ $roxo-fraco: #d666f8;
         align-items: center;
         justify-content: center;
         gap: 10px;
-        background: #d6caca56;
-        padding: 8px;
-        border-right: 10px solid $roxo-fraco;
-        box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
 
-        @media screen and (max-width: 720px) {
-          min-width: 100%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
         }
 
         h3 {
@@ -99,6 +106,7 @@ $roxo-fraco: #d666f8;
         }
 
         ul {
+          min-height: 150px;
           width: 100%;
           display: flex;
           flex-wrap: wrap;
@@ -106,9 +114,19 @@ $roxo-fraco: #d666f8;
           align-items: center;
           justify-content: space-around;
           gap: 1rem;
+          background: #d6caca56;
+          padding: 8px;
+          border-right: 10px solid $roxo-fraco;
+          box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
 
           li {
-            font-size: 3.1rem;
+            font-size: 3rem;
+            transition: all 0.5s ease;
+
+            &:hover {
+              transform: scale(1.1);
+              cursor: pointer;
+            }
           }
         }
       }

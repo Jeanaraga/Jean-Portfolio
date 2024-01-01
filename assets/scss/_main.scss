@@ -21,6 +21,8 @@ main {
         align-items: start;
         justify-content: center;
 
+        
+
         h4 {
             color: #000000;
             font-weight: 400;
@@ -57,6 +59,8 @@ main {
             justify-content: start;
             gap: 15px;
 
+            
+
             button {
                 font-size: 1rem;
                 padding: 5px 16px;
@@ -75,6 +79,11 @@ main {
                     background: #000;
                     border: 1.5px solid #fff;
                 }
+
+                @media screen and (max-width: 380px) {
+                    font-size: 0.70rem;
+                    padding: 5px 12px;
+                  }
             }
         }
     }

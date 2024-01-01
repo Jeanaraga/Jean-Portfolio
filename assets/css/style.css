@@ -181,6 +181,12 @@ main .container-info-intro .botoes-intro button:hover {
   background: #000;
   border: 1.5px solid #fff;
 }
+@media screen and (max-width: 380px) {
+  main .container-info-intro .botoes-intro button {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+}
 
 .sobre-mim {
   height: 100vh;
@@ -209,13 +215,12 @@ main .container-info-intro .botoes-intro button:hover {
   color: #d666f8;
 }
 .sobre-mim .container-sobre-mim p {
-  background-color: #d6caca;
   padding: 5px 20px;
   border-left: 8px solid #d666f8;
 }
 @media screen and (max-width: 480px) {
   .sobre-mim .container-sobre-mim p {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 .sobre-mim .container-sobre-mim .container-infos-skils {
@@ -227,7 +232,7 @@ main .container-info-intro .botoes-intro button:hover {
   width: 100%;
   gap: 1rem;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   .sobre-mim .container-sobre-mim .container-infos-skils {
     align-items: center;
     justify-content: center;
@@ -242,10 +247,6 @@ main .container-info-intro .botoes-intro button:hover {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: rgba(134, 101, 138, 0.1098039216);
-  padding: 8px;
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .sobre-mim .container-sobre-mim .container-infos-skils .info-pessoa h3 {
   color: #735f75;
@@ -254,10 +255,22 @@ main .container-info-intro .botoes-intro button:hover {
 .sobre-mim .container-sobre-mim .container-infos-skils .info-pessoa ul {
   list-style-type: none;
   width: 100%;
-  text-align: start;
+  background: rgba(214, 202, 202, 0.337254902);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  min-height: 150px;
+}
+@media screen and (max-width: 480px) {
+  .sobre-mim .container-sobre-mim .container-infos-skils .info-pessoa ul li {
+    font-size: 14px;
+  }
 }
 .sobre-mim .container-sobre-mim .container-infos-skils .info-skils {
-  min-height: 180px;
   min-width: 250px;
   width: 55%;
   display: flex;
@@ -265,14 +278,10 @@ main .container-info-intro .botoes-intro button:hover {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: rgba(214, 202, 202, 0.337254902);
-  padding: 8px;
-  border-right: 10px solid #d666f8;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   .sobre-mim .container-sobre-mim .container-infos-skils .info-skils {
-    min-width: 100%;
+    width: 100%;
   }
 }
 .sobre-mim .container-sobre-mim .container-infos-skils .info-skils h3 {
@@ -280,6 +289,7 @@ main .container-info-intro .botoes-intro button:hover {
   font-weight: 400;
 }
 .sobre-mim .container-sobre-mim .container-infos-skils .info-skils ul {
+  min-height: 150px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -287,9 +297,18 @@ main .container-info-intro .botoes-intro button:hover {
   align-items: center;
   justify-content: space-around;
   gap: 1rem;
+  background: rgba(214, 202, 202, 0.337254902);
+  padding: 8px;
+  border-right: 10px solid #d666f8;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .sobre-mim .container-sobre-mim .container-infos-skils .info-skils ul li {
-  font-size: 3.1rem;
+  font-size: 3rem;
+  transition: all 0.5s ease;
+}
+.sobre-mim .container-sobre-mim .container-infos-skils .info-skils ul li:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 #projetos {
