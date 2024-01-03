@@ -318,5 +318,74 @@ main .container-info-intro .botoes-intro button:hover {
   align-items: center;
   justify-content: center;
 }
+#projetos .container-projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+}
+#projetos .container-projetos h2 {
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 1rem;
+}
+#projetos .container-projetos h2 span {
+  color: #d666f8;
+}
+#projetos .container-projetos .container-gallery {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+  padding: 5px 20px;
+  border-left: 8px solid #d666f8;
+  border: 1px solid #000;
+  height: auto;
+}
+#projetos .container-projetos .container-gallery .barra-lateral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#projetos .container-projetos .container-gallery .barra-lateral ul {
+  list-style-type: none;
+  font-size: 1.1rem;
+  min-height: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 180px;
+}
+#projetos .container-projetos .container-gallery .barra-lateral ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+#projetos .container-projetos .container-gallery .conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  gap: 1rem;
+  border: 1px solid red;
+}
+#projetos .container-projetos .container-gallery .conteudo .img-titulo {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 0.8rem;
+}
+#projetos .container-projetos .container-gallery .conteudo .img-titulo img {
+  width: 220px;
+  height: 220px;
+}
 
 /*# sourceMappingURL=style.css.map */
