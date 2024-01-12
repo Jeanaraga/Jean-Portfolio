@@ -1,9 +1,13 @@
 #projetos {
-  height: 100vh;
+  min-height: 100vh;
   padding: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width:480px) {
+    padding: 20px;
+  }
 
   .container-projetos {
     display: flex;
@@ -11,6 +15,8 @@
     align-items: start;
     justify-content: center;
     gap: 2rem;
+    
+
 
     h2 {
       font-size: 48px;
@@ -21,23 +27,32 @@
         color: $roxo-fraco;
       }
     }
+
     .container-gallery {
       display: flex;
       align-items: start;
       justify-content: center;
-      gap: 1rem;
-      padding: 5px 20px;
+      gap: 1.5rem;
+      height: 66vh;
+      min-height: 66vh;
+      background: #d6caca56;
+      z-index: 0;
+      
       border-left: 8px solid $roxo-fraco;
-      border: 1px solid #000;
-      height: auto;
+      box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.3);
 
       .barra-lateral {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         height: 100%;
+        position: relative;
 
-        ul {
+
+
+
+        .lista-projeto {
           list-style-type: none;
           font-size: 1.1rem;
           min-height: 100;
@@ -46,40 +61,128 @@
           align-items: center;
           justify-content: center;
           flex-direction: column;
-          min-width: 180px;
+          height: 100%;
+          min-width: 250px;
 
-          li {
+          @media screen and (max-width:480px) {
+            font-size: 1rem;
+          }
+
+          @media screen and (max-width:768px) {
+            display: none;
+          }
+
+
+
+          .input-field {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 10px;
+            padding: 14% 5px;
+            cursor: pointer;
+
+            label {
+              cursor: pointer;
+            }
+
+            input {
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        .projeto-ativado {
+          z-index: 1000;
+          display: flex;
+          position: absolute;
+          background: rgba($color: $roxo-fraco, $alpha: 1.0);
+          color: #000000;
+          top: 0;
+          left: 0px;
+          width: 220px;
+          box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.3);
+        }
+      }
+
+      .conteudo {
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        height: 100%;
+        padding: 10px;
+        position: relative;
+
+        #botao-projeto {
+          display: none;
+          position: absolute;
+          top: -30px;
+          right: 20px;
+          font-size: 40px;
+          color: #000;
+
+          @media screen and (max-width:768px) {
+            display: block;
+            font-size: 40px;
             padding: 5px;
             cursor: pointer;
           }
         }
-      }
-      .conteudo {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: space-evenly;
-        gap: 1rem;
-        border: 1px solid red;
 
         .img-titulo {
-            display: flex;
-            align-items: start;
-            justify-content: center;
-            gap: 0.8rem;
+          width: 82%;
+          z-index: 0;
 
-            img {
-                width: 220px;
-                height: 220px;
+          @media screen and (max-width:480px) {
+              width: 95%;
+          }
 
-            }
+
+          img {
+            width: 100%;
+            border: 1px solid #000;
+            border-radius: 4px;
+
+
+
+          }
         }
-      }
+
+        p {
+          @media screen and (max-width:480px) {
+            font-size: 0.8rem;
+
+            span {
+              font-size: 0.9rem;
+            }
+          }
+
+          span {
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
+          padding: 5px;
+          width: 100px;
+          margin-top: 10px;
+          background: $roxo-fraco;
+          border-radius: 4px;
+          transition: all 0.5s ease;
+          letter-spacing: 1.5px;
+
+          &:hover {
+            width: 150px;
+          }
+        }
+      }     
     }
   }
 }
