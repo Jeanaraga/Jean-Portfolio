@@ -1,11 +1,7 @@
 $roxo-fraco: #d666f8;
 
 .sobre-mim {
-  height: 100vh;
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include confiPadraoSec();
   margin-bottom: 50px;
 
   @media screen and (max-width: 480px) {

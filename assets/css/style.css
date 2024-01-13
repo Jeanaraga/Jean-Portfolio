@@ -110,11 +110,11 @@ body {
 }
 main {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
 }
 @media screen and (max-width: 480px) {
   main {
@@ -191,7 +191,7 @@ main .container-info-intro .botoes-intro button:hover {
 }
 
 .sobre-mim {
-  height: 100vh;
+  min-height: 100vh;
   padding: 40px;
   display: flex;
   align-items: center;
@@ -473,6 +473,79 @@ main .container-info-intro .botoes-intro button:hover {
   font-weight: bold;
 }
 
+#educacao {
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  #educacao {
+    padding: 20px;
+    height: 200vh;
+    margin-bottom: 3rem;
+  }
+}
+#educacao .container-educacao {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+#educacao .container-educacao h2 {
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 2rem;
+}
+#educacao .container-educacao h2 span {
+  color: #d666f8;
+}
+#educacao .container-educacao .box-edu {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+#educacao .container-educacao .box-edu .educacao {
+  width: 300px;
+  height: 350px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+#educacao .container-educacao .box-edu .educacao:hover {
+  transform: scale(1.05);
+}
+#educacao .container-educacao .box-edu .educacao hr {
+  background-color: #000;
+  height: 2px;
+  width: 70%;
+}
+#educacao .container-educacao .box-edu .educacao h3 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2b003b;
+}
+#educacao .container-educacao .box-edu .educacao .curso {
+  font-size: 24px;
+  text-align: center;
+}
+#educacao .container-educacao .box-edu .educacao .escola {
+  font-size: 18px;
+  text-align: center;
+}
+
 #footer {
   max-height: 140vh;
   padding: 40px;
@@ -485,71 +558,6 @@ main .container-info-intro .botoes-intro button:hover {
     padding: 20px;
     min-height: 120vh;
   }
-}
-#footer .container-contato {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-auto-rows: auto;
-  grid-auto-flow: row;
-  gap: 1.5rem;
-}
-@media screen and (max-width: 600px) {
-  #footer .container-contato {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    gap: 2rem;
-  }
-}
-#footer .container-contato .intro-footer {
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: start;
-  justify-content: center;
-}
-#footer .container-contato .intro-footer h2 {
-  font-size: 38px;
-  color: #000;
-}
-#footer .container-contato .intro-footer h2 span {
-  color: #d666f8;
-}
-#footer .container-contato .intro-footer p {
-  font-size: 0.9rem;
-}
-#footer .container-contato .info-footer,
-#footer .container-contato .redes-sociais {
-  list-style: none;
-  padding: 20px 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  gap: 15px;
-}
-#footer .container-contato .info-footer li,
-#footer .container-contato .redes-sociais li {
-  color: #000;
-}
-#footer .container-contato .botao-footer {
-  background-color: #d666f8;
-  border-radius: 4px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 180px;
-  height: 50px;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  text-decoration: none;
-  color: #000;
-}
-#footer .container-contato .botao-footer:hover {
-  width: 210px;
 }
 
 /*# sourceMappingURL=style.css.map */

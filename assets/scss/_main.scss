@@ -4,11 +4,7 @@ $linear-gradient: linear-gradient(120deg,#fff,#ccbebe);
 
 main {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
+    @include confiPadraoSec();
     // background: $linear-gradient;
 
     @media screen and (max-width:480px) {

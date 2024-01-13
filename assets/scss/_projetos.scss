@@ -1,10 +1,6 @@
 #projetos {
   margin-top: 2rem;
-  min-height: 100vh;
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include confiPadraoSec();
 
 
 

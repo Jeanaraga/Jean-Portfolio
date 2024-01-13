@@ -1,4 +1,11 @@
 $branco: #fff;
+@mixin confiPadraoSec {
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 * {
@@ -19,4 +26,5 @@ body {
 @import 'main';
 @import 'about';
 @import 'projetos';
+@import 'educacao';
 @import 'footer';
