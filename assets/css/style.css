@@ -23,6 +23,7 @@ body {
   background: #000000;
   color: #fff;
   position: fixed;
+  z-index: 2000;
 }
 .cabecalho .logo {
   cursor: pointer;
@@ -117,7 +118,8 @@ main {
 }
 @media screen and (max-width: 480px) {
   main {
-    padding: 15px;
+    padding: 20px;
+    height: 120vh;
   }
 }
 main .container-info-intro {
@@ -153,7 +155,7 @@ main .container-info-intro p {
 }
 @media screen and (max-width: 480px) {
   main .container-info-intro p {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 main .container-info-intro .botoes-intro {
@@ -199,6 +201,7 @@ main .container-info-intro .botoes-intro button:hover {
 @media screen and (max-width: 480px) {
   .sobre-mim {
     padding: 20px;
+    height: 120vh;
   }
 }
 .sobre-mim .container-sobre-mim {
@@ -313,6 +316,7 @@ main .container-info-intro .botoes-intro button:hover {
 }
 
 #projetos {
+  margin-top: 2rem;
   min-height: 100vh;
   padding: 40px;
   display: flex;
@@ -322,6 +326,7 @@ main .container-info-intro .botoes-intro button:hover {
 @media screen and (max-width: 480px) {
   #projetos {
     padding: 20px;
+    min-height: 120vh;
   }
 }
 #projetos .container-projetos {
@@ -329,12 +334,11 @@ main .container-info-intro .botoes-intro button:hover {
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 #projetos .container-projetos h2 {
   font-size: 48px;
   color: #000;
-  margin-bottom: 1rem;
 }
 #projetos .container-projetos h2 span {
   color: #d666f8;
@@ -344,10 +348,10 @@ main .container-info-intro .botoes-intro button:hover {
   align-items: start;
   justify-content: center;
   gap: 1.5rem;
-  height: 66vh;
-  min-height: 66vh;
-  background: rgba(214, 202, 202, 0.337254902);
-  z-index: 0;
+  height: 70vh;
+  min-height: 70vh;
+  background: rgba(214, 202, 202, 0.3960784314);
+  position: relative;
   border-left: 8px solid #d666f8;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
@@ -386,15 +390,21 @@ main .container-info-intro .botoes-intro button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14% 5px;
+  padding: 14% 10px;
   cursor: pointer;
 }
 #projetos .container-projetos .container-gallery .barra-lateral .lista-projeto .input-field label {
   cursor: pointer;
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 768px) {
+  #projetos .container-projetos .container-gallery .barra-lateral .lista-projeto .input-field label {
+    font-size: 1rem;
+  }
 }
 #projetos .container-projetos .container-gallery .barra-lateral .lista-projeto .input-field input {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
 }
 #projetos .container-projetos .container-gallery .barra-lateral .projeto-ativado {
@@ -414,6 +424,7 @@ main .container-info-intro .botoes-intro button:hover {
   flex-direction: column;
   align-items: start;
   justify-content: center;
+  gap: 20px;
   height: 100%;
   padding: 10px;
   position: relative;
@@ -434,21 +445,22 @@ main .container-info-intro .botoes-intro button:hover {
     cursor: pointer;
   }
 }
-#projetos .container-projetos .container-gallery .conteudo .img-titulo {
-  width: 82%;
-  z-index: 0;
+#projetos .container-projetos .container-gallery .conteudo img {
+  width: 80%;
+  max-height: 45vh;
+  border: 1px solid #000;
+  border-radius: 4px;
+  z-index: -100;
 }
 @media screen and (max-width: 480px) {
-  #projetos .container-projetos .container-gallery .conteudo .img-titulo {
+  #projetos .container-projetos .container-gallery .conteudo img {
     width: 95%;
   }
 }
-#projetos .container-projetos .container-gallery .conteudo .img-titulo img {
-  width: 100%;
-  border: 1px solid #000;
-  border-radius: 4px;
+#projetos .container-projetos .container-gallery .conteudo p {
+  font-size: 1.1rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   #projetos .container-projetos .container-gallery .conteudo p {
     font-size: 0.8rem;
   }
@@ -460,19 +472,84 @@ main .container-info-intro .botoes-intro button:hover {
   font-size: 1.2rem;
   font-weight: bold;
 }
-#projetos .container-projetos .container-gallery .conteudo a {
+
+#footer {
+  max-height: 140vh;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  #footer {
+    padding: 20px;
+    min-height: 120vh;
+  }
+}
+#footer .container-contato {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+  gap: 1.5rem;
+}
+@media screen and (max-width: 600px) {
+  #footer .container-contato {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 2rem;
+  }
+}
+#footer .container-contato .intro-footer {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  justify-content: center;
+}
+#footer .container-contato .intro-footer h2 {
+  font-size: 38px;
+  color: #000;
+}
+#footer .container-contato .intro-footer h2 span {
+  color: #d666f8;
+}
+#footer .container-contato .intro-footer p {
+  font-size: 0.9rem;
+}
+#footer .container-contato .info-footer,
+#footer .container-contato .redes-sociais {
+  list-style: none;
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 15px;
+}
+#footer .container-contato .info-footer li,
+#footer .container-contato .redes-sociais li {
+  color: #000;
+}
+#footer .container-contato .botao-footer {
+  background-color: #d666f8;
+  border-radius: 4px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 50px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
   text-decoration: none;
   color: #000;
-  padding: 5px;
-  width: 100px;
-  margin-top: 10px;
-  background: #d666f8;
-  border-radius: 4px;
-  transition: all 0.5s ease;
-  letter-spacing: 1.5px;
 }
-#projetos .container-projetos .container-gallery .conteudo a:hover {
-  width: 150px;
+#footer .container-contato .botao-footer:hover {
+  width: 210px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,6 +10,7 @@ $preto-fraco: #000000;
     background: $preto-fraco;
     color: $branco;
     position: fixed;
+    z-index: 2000;
 
     .logo {
         cursor: pointer;
