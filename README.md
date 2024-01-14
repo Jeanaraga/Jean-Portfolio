@@ -3,7 +3,7 @@
 Bem-vindo ao meu incrível portfólio! Aqui você encontrará uma visão abrangente dos meus projetos, habilidades e experiências. 🌈
 
 ### 🏠 [Início](#)
-![GIF Início](url-do-gif)
+![GIF Início](./assets/img/Capturar.PNG)
 
 ---
 
