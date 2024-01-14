@@ -17,6 +17,7 @@ $preto-fraco: #000000;
 
         h1 {
             font-family: 'Bebas Neue', sans-serif;
+            color: #fff;
         }
     }
 
@@ -73,7 +74,7 @@ $preto-fraco: #000000;
     background: $preto-fraco;
     width: 100%;
     position: absolute;
-    top: 70px;
+    top: 65px;
     right: 0;
     z-index: 2000;
     animation: animaMenu 0.8s ease 0s 1 normal forwards;

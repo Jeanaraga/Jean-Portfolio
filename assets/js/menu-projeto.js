@@ -11,14 +11,14 @@ export function menuProjeto() {
           titulo: "SB Filmes: ",
           descricao:
             "Projeto escolar; é um site de gerenciamento de filmes, provavelmente o site mais complexo que já fiz. Há opções de cadastro e login usando localStorage, além de opções para curtir e descurtir filmes.",
-          imagem: "./assets/img/sbfilmes.png",
+          imagem: "./assets/img/sbfilmes.PNG",
           link: "",
         },
         p3: {
           titulo: "Jogo da Memória: ",
           descricao:
             "Projeto escolar; o conhecido jogo da memória, mas com figuras relacionadas à enfermagem. Desenvolvemos este jogo em homenagem ao Dia da Enfermagem, com quatro grupos: se acertar, continua, se perder, passa para o próximo grupo. O projeto foi muito elogiado pela direção da Proz.",
-          imagem: "./assets/img/jogodamemoria.png",
+          imagem: "./assets/img/jogodamemoria.PNG",
           link:"",
         },
         p4: {

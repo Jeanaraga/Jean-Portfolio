@@ -15,7 +15,9 @@
 <body>
   <header class="cabecalho">
     <div class="logo">
-      <h1>Jean P.</h1>
+      <a href="#intro">
+        <h1>Jean P.</h1>
+      </a>
     </div>
     <nav class="nav-desktop">
       <a href="#sobre-mim">Sobre Mim</a>
@@ -36,7 +38,7 @@
     </div>
   </header>
 
-  <main class="intro">
+  <main class="intro"  id="intro">
     <div class="container-info-intro">
       <h4>Oi, eu sou o Jean🤓☝</h4>
       <h2>
@@ -48,14 +50,18 @@
         soluções incríveis. Vamos criar algo juntos!
       </p>
       <div class="botoes-intro">
-        <button id="botao-preto-intro">
-          Baixar CV
-          <span class="material-symbols-outlined"> upload </span>
-        </button>
-        <button id="botao-branco-intro">
-          Entrar em contato
-          <span class="material-symbols-outlined"> open_in_new </span>
-        </button>
+        <a href="./assets/cv/Desenvolvedor Web.pdf" download>
+          <button id="botao-preto-intro">
+            Baixar CV
+            <span class="material-symbols-outlined"> upload </span>
+          </button>
+        </a>
+        <a href="mailto:jeanjesuspedrobook@gmail.com">
+          <button id="botao-branco-intro">
+            Entrar em contato
+            <span class="material-symbols-outlined"> open_in_new </span>
+          </button>
+        </a>
       </div>
     </div>
   </main>
@@ -188,7 +194,7 @@
           <i class="devicon-linkedin-plain colored"></i>
           Linkedin
         </a></li>
-        <li><a href="">
+        <li><a href="github.com/Jeanaraga">
           <i class="devicon-github-plain colored"></i>
           Github
         </a></li>
@@ -199,7 +205,7 @@
       <ul class="info-footer">
         <li><b>Email:</b> jeanjesuspedrobook@gmail.com</li>
         <li><b>Telefone:</b> (37) 9 99128-8953</li>
-        <a href="" class="botao-footer">Enviar mensagem!</a>
+        <a href="mailto:jeanjesuspedrobook@gmail.com" class="botao-footer">Enviar mensagem!</a>
       </ul>
     </div>
   </footer>
