@@ -1,5 +1,6 @@
 $roxo-fraco: #d666f8;
 $preto-fraco: #000000;
+$branco: #fff;
 
 .cabecalho {
     display: flex;
@@ -8,7 +9,7 @@ $preto-fraco: #000000;
     align-items: center;
     justify-content: space-between;
     background: $preto-fraco;
-    color: $branco;
+    color: #fff;
     position: fixed;
     z-index: 2000;
 
@@ -30,7 +31,7 @@ $preto-fraco: #000000;
         a {
             text-decoration: none;
             font-size: 18px;
-            color: $branco;
+            color: #fff;
             border-bottom: 1px solid transparent;
             transition: all 0.5s ease;
 
