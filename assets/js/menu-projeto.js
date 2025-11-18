@@ -8,11 +8,11 @@ export function menuProjeto() {
           link: "https://jeanaraga.github.io/Bully/"
         },
         p2: {
-          titulo: "Snap",
+          titulo: "Ana Luiza Nutrição",
           descricao:
-            "Este projeto é uma landing page simples desenvolvida para uma loja virtual, com um design moderno e menu mobile interativo. O site foi criado para oferecer uma experiência de navegação fluida, garantindo acessibilidade e usabilidade em dispositivos móveis. A landing page é focada em apresentar produtos e facilitar a interação do usuário com a loja.",
-          imagem: "./assets/img/desktop-preview.jpg",
-          link: "https://github.com/Jeanaraga/intro-section-with-dropdown-navigation-main",
+            "O Projeto Ana Luiza Nutrição é uma landing page profissional desenvolvida especialmente para destacar o trabalho da nutricionista Ana Luiza de forma clara, moderna e totalmente focada em conversão. A página foi planejada para transmitir confiança, autoridade e acolhimento, elementos fundamentais para profissionais da área da saúde que desejam atrair pacientes e fortalecer sua presença digital.",
+          imagem: "./assets/img/analuiza.png",
+          link: "https://analuizanutri.github.io/Nutricionista/",
         },
         p3: {
           titulo: "Jogo da Memória ",
