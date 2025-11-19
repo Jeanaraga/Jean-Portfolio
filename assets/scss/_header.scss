@@ -1,110 +1,101 @@
 $roxo-fraco: #d666f8;
-$preto-fraco: #000000;
+$preto: #000;
 $branco: #fff;
 
 .cabecalho {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  padding: 15px 40px;
+  background: $preto;
+  color: $branco;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo a {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 26px;
+    color: $branco;
+    text-decoration: none;
+  }
+
+  .nav-desktop {
     display: flex;
-    width: 100%;
-    padding: 15px 40px;
-    align-items: center;
-    justify-content: space-between;
-    background: $preto-fraco;
-    color: #fff;
-    position: fixed;
-    z-index: 2000;
-
-    .logo {
-        cursor: pointer;
-
-        h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            color: #fff;
-        }
-    }
-
-    .nav-desktop {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-
-        a {
-            text-decoration: none;
-            font-size: 18px;
-            color: #fff;
-            border-bottom: 1px solid transparent;
-            transition: all 0.5s ease;
-
-            &:hover {
-                border-bottom: 1px solid $roxo-fraco;
-            }
-        }
-    }
-
-    .btn-menu-mobile {
-        color: $branco;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        font-weight: bold;
-        padding: 5px;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-    }
-
-
-    @media screen and (max-width: 720px) {
-        .nav-desktop {
-            display: none;
-        }
-        .btn-menu-mobile {
-            display: flex;
-        }
-    }
-}
-
-.nav-mobile {
-    display: none;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 40px;
-    background: $preto-fraco;
-    width: 100%;
-    position: absolute;
-    top: 65px;
-    right: 0;
-    z-index: 2000;
-    animation: animaMenu 0.8s ease 0s 1 normal forwards;
+    gap: 18px;
 
     a {
-        text-decoration: none;
-        font-size: 18px;
-        color: $branco;
-        border-bottom: 1px solid transparent;
-        transition: all 0.5s ease;
+      color: $branco;
+      text-decoration: none;
+      font-size: 18px;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
 
-        &:hover {
-            border-bottom: 1px solid $roxo-fraco;
-        }
+      &:hover {
+        border-color: $roxo-fraco;
+      }
     }
+  }
+
+  .btn-menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    color: $branco;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 720px) {
+    .nav-desktop {
+      display: none;
+    }
+    .btn-menu-mobile {
+      display: block;
+    }
+  }
 }
 
-.nav-mobile.ativar {
-    display: flex;
-}
+// ========================
+// NAV MOBILE
+// ========================
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-@keyframes animaMenu {
-	0% {
-		opacity: 0;
-		transform: translateY(-65px);
-	}
+  position: absolute;
+  width: 100%;
+  top: 65px;
+  right: 0;
 
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  background: $preto;
+  padding: 25px 40px;
+
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.4s ease;
+
+  a {
+    color: $branco;
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+
+    &:hover {
+      border-color: $roxo-fraco;
+    }
+  }
+
+  &.ativar {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
 }

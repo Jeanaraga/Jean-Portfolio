@@ -1,87 +1,128 @@
 $roxo-fraco: #d666f8;
 $preto-fraco: #000000;
-$linear-gradient: linear-gradient(120deg,#fff,#ccbebe);
 
-main {
-    width: 100%;
-    @include confiPadraoSec();
-    // background: $linear-gradient;
+main.intro {
+  width: 100%;
+  @include confiPadraoSec();
 
-    @media screen and (max-width:480px) {
-        padding: 20px;
-        height: 120vh;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 480px) {
+    padding: 30px 20px;
+    height: auto;
+    min-height: 85vh;
+  }
+
+  .container-info-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 650px;
+
+    @media (max-width: 480px) {
+      align-items: start;
     }
 
-    .container-info-intro {
+    h4 {
+      color: #000;
+      font-weight: 400;
+      margin-bottom: 5px;
+
+      @media (max-width: 480px) {
+        font-size: 15px;
+      }
+    }
+
+    h2 {
+      color: #000;
+      font-size: 52px;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 1rem;
+
+      span {
+        color: $roxo-fraco;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 40px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 32px;
+      }
+    }
+
+    p {
+      color: #6c666d;
+      max-width: 480px;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+
+      @media (max-width: 480px) {
+        font-size: 14px;
+        max-width: 100%;
+      }
+    }
+
+    .botoes-intro {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      a {
+        text-decoration: none;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        border: 1.5px solid #000;
+        background: #fff;
         display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        transition: 0.4s ease;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 
-        
-
-        h4 {
-            color: #000000;
-            font-weight: 400;
+        &:hover {
+          background: #000;
+          color: $roxo-fraco;
+          border-color: #fff;
         }
-        h2 {
-            color: #000;
-            font-size: 48px;
-            line-height: 1;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            max-width: 600px;
 
-            @media screen and (max-width:480px) {
-                font-size: 32px;
-            }
-
-            span {
-                color: $roxo-fraco;
-            }
+        i {
+          font-size: 1.2rem;
         }
-        p {
-            color: #6c666d;
-            max-width: 500px;
-            margin-bottom: 1rem;
 
-            @media screen and (max-width:480px) {
-                font-size: 14px;
-            }
+        @media (max-width: 420px) {
+          font-size: 0.8rem;
+          padding: 8px 14px;
         }
-        .botoes-intro {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: start;
-            gap: 15px;
-
-            
-
-            button {
-                font-size: 1rem;
-                padding: 5px 16px;
-                border-radius: 5px;
-                cursor: pointer;
-                box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
-                border: 1.5px solid #000;
-                transition: all 0.5s ease;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 5px;
-                
-                &:hover {
-                    color: $roxo-fraco;
-                    background: #000;
-                    border: 1.5px solid #fff;
-                }
-
-                @media screen and (max-width: 380px) {
-                    font-size: 0.70rem;
-                    padding: 5px 12px;
-                  }
-            }
-        }
+      }
     }
+  }
+}
+
+
+.typing {
+  width: fit-content;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid $roxo-fraco;
+  animation: typing 3s steps(25), blink .7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0% { border-color: $roxo-fraco; }
+  50% { border-color: transparent; }
+  100% { border-color: $roxo-fraco; }
 }

@@ -1,110 +1,98 @@
 #footer {
-    max-height: 140vh;
-    min-height: 50vh;
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #c4c4c46e;
+  background: #111;
+  color: #fff;
+  padding: 60px 20px 20px;
 
-    @media screen and (max-width:480px) {
-        padding: 20px;
-        min-height: 120vh;
+  .footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+
+    .dot-span {
+      color: #d666f8;
     }
 
-    .container-contato {
-        width: 100%;
+    .col {
+      h3, h4 {
+        margin-bottom: 15px;
         display: flex;
-        flex-wrap: wrap;
-        align-items: start;
-        justify-content: space-around;
-        gap: 2rem;
+        align-items: center;
+        gap: 8px;
 
-        .intro-footer {
-            width: 400px;
-            max-width: 90vw;
-
-            h2 {
-                font-size: 42px;
-                color: #000;
-
-                @media screen and (max-width: 360px){
-                    font-size: 32px;
-                }
-          
-                span {
-                  color: $roxo-fraco;
-                }
-              }
+        i {
+          color: $roxo-fraco;
         }
+      }
 
-        .redes-sociais {
-            max-width: 90vw;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            justify-content: start;
-            gap: 10px;
-            list-style-type: none;
+      p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: #ccc;
+      }
 
-            @media screen and (max-width:480px) {
-                width: 90vw;
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 8px;
+          font-size: 0.9rem;
+          color: #ccc;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          i {
+            color: $roxo-fraco;
+          }
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.2s;
+
+            i {
+              color: $roxo-fraco;
             }
 
-            h3 {
-                font-size: 24px;
-                color: #000;
-                font-weight: 700;
+            &:hover {
+              opacity: 0.7;
             }
-
-            a {
-                font-size: 20px;
-                color: #000;
-                text-decoration: none;
-
-                i {
-                    font-size: 32px;
-                }
-            }
+          }
         }
-        .info-footer {
-            max-width: 90vw;
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            justify-content: start;
-            gap: 20px;
-            list-style-type: none;
+      }
 
-            @media screen and (max-width:480px) {
-                width: 90vw;
-            }
+      .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 12px;
+        padding: 10px 14px;
+        background: $roxo-fraco;
+        color: #111;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.2s;
 
-            b {
-                font-size: 18px;
-            }
-
-            a {
-                width: 180px;
-                height: 50px;
-                text-align: center;
-                background-color: $roxo-fraco;
-                text-decoration: none;
-                color: #000;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 4px;
-                transition: all 0.5s ease;
-                box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.3);
-
-                &:hover {
-                    width: 210px;
-                }
-            }
+        &:hover {
+          background: #1eb858;
         }
+      }
     }
+  }
 
+  .copy {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    margin-top: 30px;
 
-
+    p {
+      font-size: 0.8rem;
+      color: #777;
+    }
+  }
 }
