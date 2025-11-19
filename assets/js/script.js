@@ -52,11 +52,11 @@ function menuProjeto() {
           link: "https://analuizanutri.github.io/Nutricionista/",
         },
         p3: {
-          titulo: "Jogo da Memória",
+          titulo: "Guilherme Souza Psi",
           descricao:
-            "O conhecido jogo da memória com figuras de enfermagem, feito em homenagem ao Dia da Enfermagem.",
-          imagem: "./assets/img/jogodamemoria.PNG",
-          link:"",
+            "O site Guilherme Souza Psicólogo é um site completo e profissional, desenvolvido para fortalecer a presença digital do psicólogo e oferecer uma experiência clara e acolhedora para seus pacientes. O projeto inclui páginas institucionais bem organizadas, apresentação dos serviços, área de contato integrada ao WhatsApp e um blog atualizado, ideal para construir autoridade e atrair novos pacientes através de conteúdo relevante.",
+          imagem: "./assets/img/guilhermepsi.png",
+          link:"https://guilhermesouzapsi.com.br/",
         },
         p4: {
           titulo: "Sunnyside",
