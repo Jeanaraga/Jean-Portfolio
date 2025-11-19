@@ -1,6 +1,4 @@
-$roxo-fraco: #d666f8;
-$preto: #000;
-$branco: #fff;
+
 
 .cabecalho {
   position: fixed;
@@ -8,8 +6,8 @@ $branco: #fff;
   width: 100%;
   z-index: 2000;
   padding: 15px 40px;
-  background: $preto;
-  color: $branco;
+  background: #000;
+  color: #fff;
 
   display: flex;
   align-items: center;
@@ -18,7 +16,7 @@ $branco: #fff;
   .logo a {
     font-family: "Bebas Neue", sans-serif;
     font-size: 26px;
-    color: $branco;
+    color: #fff;
     text-decoration: none;
   }
 
@@ -27,7 +25,7 @@ $branco: #fff;
     gap: 18px;
 
     a {
-      color: $branco;
+      color: #fff;
       text-decoration: none;
       font-size: 18px;
       padding-bottom: 2px;
@@ -35,7 +33,7 @@ $branco: #fff;
       transition: 0.3s;
 
       &:hover {
-        border-color: $roxo-fraco;
+        border-color: #d666f8;
       }
     }
   }
@@ -44,7 +42,7 @@ $branco: #fff;
     display: none;
     background: none;
     border: none;
-    color: $branco;
+    color: #fff;
     font-size: 30px;
     cursor: pointer;
   }
@@ -72,7 +70,7 @@ $branco: #fff;
   top: 65px;
   right: 0;
 
-  background: $preto;
+  background: #000;
   padding: 25px 40px;
 
   transform: translateY(-120%);
@@ -82,14 +80,14 @@ $branco: #fff;
   transition: 0.4s ease;
 
   a {
-    color: $branco;
+    color: #fff;
     font-size: 18px;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: 0.3s;
 
     &:hover {
-      border-color: $roxo-fraco;
+      border-color: #d666f8;
     }
   }
 

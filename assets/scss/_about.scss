@@ -1,4 +1,4 @@
-$roxo-fraco: #d666f8;
+
 
 .sobre-mim {
   width: 100%;
@@ -25,13 +25,13 @@ $roxo-fraco: #d666f8;
       margin-bottom: 1rem;
 
       span {
-        color: $roxo-fraco;
+        color: #d666f8;
       }
     }
 
     p {
       padding: 5px 20px;
-      border-left: 8px solid $roxo-fraco;
+      border-left: 8px solid #d666f8;
       max-width: 900px;
 
       @media (max-width: 480px) {
@@ -77,7 +77,7 @@ $roxo-fraco: #d666f8;
             gap: 8px;
 
             i {
-              color: $roxo-fraco;
+              color:#d666f8;
             }
 
             @media (max-width: 480px) {
@@ -106,7 +106,7 @@ $roxo-fraco: #d666f8;
           flex-wrap: wrap;
           justify-content: center;
           gap: 1rem;
-          border-right: 10px solid $roxo-fraco;
+          border-right: 10px solid #d666f8;
           background: white;
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
           list-style-type: none;
@@ -117,7 +117,7 @@ $roxo-fraco: #d666f8;
             transition: 0.3s ease;
 
             i {
-              color: $roxo-fraco;
+              color: #d666f8;
             }
 
             &:hover {
