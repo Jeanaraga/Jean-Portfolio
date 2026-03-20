@@ -17,3 +17,21 @@ window.addEventListener("resize", () => {
     iconMenu.textContent = "menu";
   }
 });
+
+
+const dataNascimento = new Date("2005-03-04"); 
+const idadeElement = document.getElementById("idade");
+
+function calcularIdade() {
+  const hoje = new Date();
+  let idade = hoje.getFullYear() - dataNascimento.getFullYear();
+  const mes = hoje.getMonth() - dataNascimento.getMonth();
+
+  if (mes < 0 || (mes === 0 && hoje.getDate() < dataNascimento.getDate())) {
+    idade--;
+  }
+
+  idadeElement.textContent = idade;
+}
+
+calcularIdade();
